@@ -1,0 +1,366 @@
+/* ========================================
+   Henry (Hank) Krohn — personal site
+   Warm paper, editorial type.
+   Distinct from the Roskr corporate dark theme.
+   ======================================== */
+
+:root {
+  --paper: #f3eee6;
+  --paper-deep: #e8e1d4;
+  --ink: #1c1914;
+  --ink-soft: #4a453c;
+  --muted: #6f685c;
+  --rule: #d4cbb8;
+  --accent: #8f3d24;
+  --accent-hover: #6e2d1a;
+  --card: #fffaf2;
+  --max: 68rem;
+  --header-h: 4.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Figtree, system-ui, -apple-system, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.65;
+  font-size: 1.05rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Fraunces, Georgia, "Times New Roman", serif;
+  font-weight: 550;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrap {
+  width: min(100% - 2rem, var(--max));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 200;
+  padding: 0.5rem 0.85rem;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ---------- Header ---------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-h);
+}
+
+.mark {
+  font-family: Fraunces, Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.mark:hover {
+  color: var(--accent);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+}
+
+.nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: var(--ink);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 4.5rem 0 4rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hero-inner {
+  max-width: 40rem;
+}
+
+.kicker {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.55rem, 8vw, 4.4rem);
+  font-weight: 560;
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 .amp {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.lede {
+  font-size: clamp(1.15rem, 2.4vw, 1.35rem);
+  color: var(--ink-soft);
+  max-width: 32rem;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-ghost {
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  background: transparent;
+}
+
+.btn-ghost:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 4.5rem 0;
+}
+
+.section-tint {
+  background: var(--paper-deep);
+  border-block: 1px solid var(--rule);
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.65rem;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.35rem);
+  margin-bottom: 2rem;
+}
+
+.split {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.split-label h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.35rem);
+}
+
+.prose p + p {
+  margin-top: 1rem;
+}
+
+.prose,
+.contact-block .prose {
+  color: var(--ink-soft);
+  max-width: 38rem;
+}
+
+/* ---------- Now ---------- */
+.now-list {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.now-list li {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 1.35rem 1.4rem;
+}
+
+.now-list h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.now-list p {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+
+/* ---------- Contact ---------- */
+.email-line {
+  display: inline-block;
+  margin: 1.25rem 0 0.85rem;
+  font-family: Fraunces, Georgia, serif;
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+}
+
+.email-line:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.contact-note {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.contact-note a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+}
+
+.contact-note a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  border-top: 1px solid var(--rule);
+  padding: 1.5rem 0 2rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+/* ---------- Focus ---------- */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 720px) {
+  .hero {
+    padding: 6.5rem 0 5.5rem;
+  }
+
+  .section {
+    padding: 5.5rem 0;
+  }
+
+  .split {
+    grid-template-columns: minmax(12rem, 0.85fr) 1.25fr;
+    gap: 3.5rem;
+    align-items: start;
+  }
+
+  .now-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.15rem;
+  }
+
+  .nav {
+    gap: 1.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn {
+    transition: none;
+  }
+}
