@@ -22,10 +22,12 @@ GitHub Pages should publish from the `main` branch, **root** directory:
 Replace or add these files — the HTML/CSS already points at them:
 
 - `assets/hank-avatar.jpg` — primary circular headshot (LinkedIn profile photo)
-- `assets/photos/hank-waterfall.jpg` — secondary “in the field” portrait beside About
-- `assets/photos/lupines-mountains.jpg` — soft hero wash + Field notes
-- `assets/photos/turquoise-canyon.jpg` — Field notes
-- `assets/photos/crater-lake.jpg` — Field notes
+- `assets/photos/lupines-mountains.jpg` — soft hero wash (from `01-lupines-mountains.jpg`)
+- `assets/photos/moss-canyon.jpg` — Field notes (from `02-moss-canyon.jpg`)
+- `assets/photos/turquoise-pool.jpg` — Field notes (from `03-turquoise-pool.jpg`)
+- `assets/photos/hank-waterfall.jpg` — optional About portrait, if sent later
+
+Skipped as redundant texture: stone-grass / stone-moss frames.
 
 Until those optional photos exist, the Field notes strip and About portrait stay hidden. The hero still shows the avatar path above.
 

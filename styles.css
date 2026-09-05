@@ -456,7 +456,7 @@ img {
   }
 
   .photo-strip {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     gap: 1rem;
   }
 
