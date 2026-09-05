@@ -17,17 +17,16 @@ GitHub Pages should publish from the `main` branch, **root** directory:
 | `CNAME` | Custom domain (`hankkrohn.com`) |
 | `assets/gold-bird.png` | Header mark and favicon |
 | `assets/hank-avatar.jpg` | Hero headshot |
-| `assets/photos/` | Field photos (portrait 3/4, landscape 4/3) |
+| `assets/photos/lupines-mountains.jpg` | Hero wash only |
 | `README.md` | This file |
 
 ### Photos
 
-- `assets/photos/lupines-mountains.jpg` — hero wash (landscape, 4/3)
-- `assets/photos/hank-waterfall.jpg` — Field notes (landscape, 4/3)
-- `assets/photos/moss-canyon.jpg` — Field notes (portrait, 3/4)
-- `assets/photos/crater-lake.jpg` — Field notes (portrait, 3/4)
+- `assets/hank-avatar.jpg` — LinkedIn-style headshot in the hero
+- `assets/gold-bird.png` — header mark and favicon
+- `assets/photos/lupines-mountains.jpg` — hero wash (landscape), under a navy overlay
 
-Portrait frames use `aspect-ratio: 3 / 4` and `object-fit: cover`. Landscape frames use `4 / 3`. Photos sit under a navy overlay at roughly 0.25–0.45 opacity.
+There is no bottom photo gallery.
 
 The `CNAME` file contains exactly:
 

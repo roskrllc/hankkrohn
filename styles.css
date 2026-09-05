@@ -372,45 +372,32 @@ img {
   color: var(--ink-soft);
 }
 
-/* ---------- Field notes ---------- */
-.photo-grid {
+/* ---------- Credentials ---------- */
+.cred-grid {
   display: grid;
   gap: 1rem;
 }
 
-.photo {
-  position: relative;
-  margin: 0;
-  overflow: hidden;
-  border-radius: 12px;
+.cred,
+.community {
+  padding: 1.35rem 1.4rem;
+  background: var(--surface);
   border: 1px solid var(--rule);
-  background: var(--navy-deep);
+  border-radius: 10px;
 }
 
-.photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.4;
+.cred ul,
+.community ul {
+  list-style: none;
+  margin-top: 0.7rem;
+  display: grid;
+  gap: 0.45rem;
+  color: var(--ink-soft);
 }
 
-.photo.portrait {
-  aspect-ratio: 3 / 4;
-}
-
-.photo.landscape {
-  aspect-ratio: 4 / 3;
-}
-
-.photo figcaption {
-  position: absolute;
-  left: 0.9rem;
-  bottom: 0.75rem;
-  z-index: 1;
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gold);
+.community {
+  margin-top: 1rem;
+  background: var(--surface-2);
 }
 
 /* ---------- Contact ---------- */
@@ -499,9 +486,10 @@ img {
     gap: 1rem;
   }
 
-  .photo-grid {
-    grid-template-columns: 1fr 1fr;
+  .cred-grid {
+    grid-template-columns: 1fr 1.35fr;
     gap: 1.1rem;
+    align-items: start;
   }
 
   .nav {
