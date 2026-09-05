@@ -13,7 +13,21 @@ GitHub Pages should publish from the `main` branch, **root** directory:
 | `index.html` | Site |
 | `styles.css` | Styles |
 | `CNAME` | Custom domain (`hankkrohn.com`) |
+| `assets/hank-avatar.jpg` | Primary headshot (hero). Drop Hank’s LinkedIn photo here. |
+| `assets/photos/` | Optional field photos (About + Field notes). Missing files hide themselves. |
 | `README.md` | This file |
+
+### Photo drop-in paths
+
+Replace or add these files — the HTML/CSS already points at them:
+
+- `assets/hank-avatar.jpg` — primary circular headshot (LinkedIn profile photo)
+- `assets/photos/hank-waterfall.jpg` — secondary “in the field” portrait beside About
+- `assets/photos/lupines-mountains.jpg` — soft hero wash + Field notes
+- `assets/photos/turquoise-canyon.jpg` — Field notes
+- `assets/photos/crater-lake.jpg` — Field notes
+
+Until those optional photos exist, the Field notes strip and About portrait stay hidden. The hero still shows the avatar path above.
 
 The `CNAME` file contains exactly:
 

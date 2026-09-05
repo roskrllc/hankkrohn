@@ -12,12 +12,14 @@
   <meta property="og:url" content="https://hankkrohn.com/">
   <meta property="og:title" content="Henry Krohn — Hank Krohn">
   <meta property="og:description" content="Virginia-based operator building logistics and transport ventures. Personal site for Henry (Hank) Krohn.">
+  <meta property="og:image" content="https://hankkrohn.com/assets/hank-avatar.jpg">
   <meta property="og:site_name" content="Henry Krohn">
   <meta property="og:locale" content="en_US">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Henry Krohn — Hank Krohn">
   <meta name="twitter:description" content="Virginia-based operator building logistics and transport ventures. Personal site for Henry (Hank) Krohn.">
+  <meta name="twitter:image" content="https://hankkrohn.com/assets/hank-avatar.jpg">
 
   <meta name="theme-color" content="#f3eee6">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231c1914'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='16' fill='%23f3eee6'%3EHK%3C/text%3E%3C/svg%3E">
@@ -42,20 +44,29 @@
   </header>
 
   <main id="main">
-    <section class="hero" id="top">
-      <div class="wrap hero-inner">
-        <p class="kicker">Henry Cameron Krohn</p>
-        <h1>Henry <span class="amp">(Hank)</span> Krohn</h1>
-        <p class="lede">Virginia-based. Building logistics and transport ventures — quietly.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="mailto:HKrohn944@gmail.com">Email Hank</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/search/results/people/?keywords=Henry%20Krohn" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+    <section class="hero hero-wash" id="top">
+      <div class="wrap hero-grid">
+        <figure class="avatar">
+          <img
+            src="assets/hank-avatar.jpg"
+            alt="Portrait of Henry Krohn"
+            width="400"
+            height="400">
+        </figure>
+        <div class="hero-copy">
+          <p class="kicker">Henry Cameron Krohn</p>
+          <h1>Henry <span class="amp">(Hank)</span> Krohn</h1>
+          <p class="lede">Virginia-based. Building logistics and transport ventures — quietly.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:HKrohn944@gmail.com">Email Hank</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/henry-krohn-26728b412/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section" id="about">
-      <div class="wrap split">
+      <div class="wrap about-grid">
         <div class="split-label">
           <p class="eyebrow">About</p>
           <h2>A person, not a brochure.</h2>
@@ -63,6 +74,32 @@
         <div class="prose">
           <p>Hank lives in Virginia, in the Maidens area. He attended Virginia Commonwealth University. Most people call him Hank; the formal name is Henry Cameron Krohn.</p>
           <p>He owns Roskr LC, a Virginia limited liability company, and uses it to build logistics and transport ventures. The work stays quiet on purpose.</p>
+        </div>
+        <figure class="field-portrait" data-optional-image>
+          <img
+            src="assets/photos/hank-waterfall.jpg"
+            alt="Hank at a waterfall cove"
+            width="1600"
+            height="1200">
+          <figcaption>In the field</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section field-notes" id="field" data-requires-images>
+      <div class="wrap">
+        <p class="eyebrow">Field notes</p>
+        <h2 class="section-title">A few frames, nothing more.</h2>
+        <div class="photo-strip">
+          <figure data-optional-image>
+            <img src="assets/photos/lupines-mountains.jpg" alt="Lupines in front of mountains" width="1600" height="1067">
+          </figure>
+          <figure data-optional-image>
+            <img src="assets/photos/turquoise-canyon.jpg" alt="Turquoise river canyon" width="1600" height="1067">
+          </figure>
+          <figure data-optional-image>
+            <img src="assets/photos/crater-lake.jpg" alt="Overlook of a crater lake" width="1600" height="1067">
+          </figure>
         </div>
       </div>
     </section>
@@ -99,7 +136,7 @@
           <a class="email-line" href="mailto:HKrohn944@gmail.com">HKrohn944@gmail.com</a>
           <p class="contact-note">
             Or find
-            <a href="https://www.linkedin.com/search/results/people/?keywords=Henry%20Krohn" rel="noopener noreferrer" target="_blank">Henry Krohn on LinkedIn</a>.
+            <a href="https://www.linkedin.com/in/henry-krohn-26728b412/" rel="noopener noreferrer" target="_blank">Henry Krohn on LinkedIn</a>.
           </p>
         </div>
       </div>
@@ -112,5 +149,25 @@
       <p class="footer-meta">Virginia · hankkrohn.com</p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      function settle(img, ok) {
+        var figure = img.closest("[data-optional-image]");
+        if (!ok && figure) figure.hidden = true;
+        var section = img.closest("[data-requires-images]");
+        if (section && !section.querySelector("[data-optional-image]:not([hidden])")) {
+          section.hidden = true;
+        }
+      }
+      document.querySelectorAll("[data-optional-image] img").forEach(function (img) {
+        if (img.complete) settle(img, img.naturalWidth > 0);
+        else {
+          img.addEventListener("load", function () { settle(img, true); });
+          img.addEventListener("error", function () { settle(img, false); });
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
