@@ -522,3 +522,10 @@ img {
     transition: none;
   }
 }
+
+.honors-note {
+  margin: 0.5rem 0 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  max-width: 36rem;
+}
